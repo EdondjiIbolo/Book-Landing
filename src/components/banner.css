@@ -1,0 +1,93 @@
+.banner {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  gap: 25px;
+  max-width: 1100px;
+  margin-inline: auto;
+  color: white;
+}
+.main-banner {
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding-top: 180px;
+  z-index: 10;
+  background-color: #0a2742;
+}
+@media screen and (max-width: 640px) {
+  .banner {
+    grid-auto-flow: row;
+    gap: 50px;
+  }
+  .main-banner {
+    padding-top: 60px;
+  }
+}
+/* Contenedor del slider */
+.slider {
+  width: 100%;
+  max-width: 1100px;
+  margin-inline: auto;
+  height: 60px; /* Ajusta según sea necesario */
+  overflow: hidden; /* Oculta el desbordamiento del contenido */
+  position: relative;
+}
+
+/* Elemento con la imagen de fondo */
+.slider::before {
+  content: "";
+  display: block;
+  width: 300%; /* Asegura que las imágenes ocupen 3 veces el ancho del contenedor */
+  height: 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("./assets/boldo.svg"), url("./assets/presto.svg"),
+    url("./assets/presto.svg");
+  background-repeat: repeat-x; /* Repite horizontalmente el pack de imágenes */
+  background-position: 0 0, 33.33% 0, 66.66% 0; /* Posiciona cada imagen en el pack */
+  background-size: 33.33% 60%; /* Cada imagen ocupa un tercio del ancho total */
+  animation: slide 20s linear infinite; /* Ajusta la duración según sea necesario */
+}
+
+/* Animación para desplazar el fondo */
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(
+      -33.33%
+    ); /* Mueve el pack completo fuera del contenedor */
+  }
+}
+
+/* Cards */
+.cards {
+  max-width: 1100px;
+  margin-inline: auto;
+  padding-top: 40px;
+  padding-block: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 25px;
+}
+
+.card,
+.banner-2 {
+  animation: card 200ms linear both;
+  animation-timeline: view();
+  animation-range: entry 10% cover 15%;
+}
+
+@keyframes card {
+  from {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
