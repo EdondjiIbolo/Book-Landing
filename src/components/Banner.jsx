@@ -41,7 +41,11 @@ export default function Banner() {
 }
 
 function BannerFooter() {
-  return <section className="slider"></section>;
+  return (
+    <section className="slider">
+      <div className="sli"></div>
+    </section>
+  );
 }
 
 export function Cards() {

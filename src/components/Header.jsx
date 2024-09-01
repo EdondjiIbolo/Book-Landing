@@ -2,10 +2,17 @@ import { useState } from "react";
 import Banner from "./Banner";
 import { Hamburguer } from "./Icons";
 import "./header.css";
+import { Link, NavLink } from "react-router-dom";
 export default function Header() {
   const [menu, setMenu] = useState(false);
   const classname = menu ? "nav show" : "nav";
   const handleClick = () => setMenu(!menu);
+  const navItems = [
+    { name: "Products", path: "/" },
+    { name: "About", path: "/about" },
+    { name: "Blog", path: "/blog" },
+  ];
+
   return (
     <main className="main-header">
       <header className="header">
@@ -14,25 +21,15 @@ export default function Header() {
         </picture>
         <nav className={classname}>
           <ul className="menu">
-            <li className="menu__item">
-              <a className="menu-link" href="#">
-                Product
-              </a>
-            </li>
-            <li className="menu__item">
-              <a className="menu-link" href="#">
-                About
-              </a>
-            </li>
-            <li className="menu__item">
-              <a className="menu-link" href="#">
-                Blog
-              </a>
-            </li>
+            {navItems.map((item, index) => (
+              <li className="menu__item" key={index}>
+                <NavItem item={item} />
+              </li>
+            ))}
           </ul>
-          <a href="#" className="link rounded-3xl">
+          <Link to="#" className="link rounded-3xl">
             Log in
-          </a>
+          </Link>
         </nav>
         <div className="toggle-menu text-white" onClick={handleClick}>
           <Hamburguer />
@@ -40,5 +37,18 @@ export default function Header() {
       </header>
       <Banner />
     </main>
+  );
+}
+
+function NavItem({ item }) {
+  return (
+    <NavLink
+      className={({ isActive, isPending }) =>
+        isPending ? "menu-link" : isActive ? "menu-link active" : "menu-link"
+      }
+      to={item.path}
+    >
+      {item.name}
+    </NavLink>
   );
 }

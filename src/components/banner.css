@@ -41,12 +41,20 @@
   width: 300%; /* Asegura que las imágenes ocupen 3 veces el ancho del contenedor */
   height: 40px;
   position: absolute;
-  top: 0;
+  top: 10px;
+  transform: translateY(-50%);
   left: 0;
+  background: linear-gradient(
+    to right,
+    #010d19,
+    rgba(255, 255, 255, 0) 10%,
+    rgba(255, 255, 255, 0) 90%,
+    #010d19
+  );
   background-image: url("./assets/boldo.svg"), url("./assets/presto.svg"),
     url("./assets/presto.svg");
   background-repeat: repeat-x; /* Repite horizontalmente el pack de imágenes */
-  background-position: 0 0, 33.33% 0, 66.66% 0; /* Posiciona cada imagen en el pack */
+  background-position: 0 50%, 33.33% 50%, 66.66% 50%; /* Posiciona cada imagen en el pack */
   background-size: 33.33% 60%; /* Cada imagen ocupa un tercio del ancho total */
   animation: slide 20s linear infinite; /* Ajusta la duración según sea necesario */
 }
