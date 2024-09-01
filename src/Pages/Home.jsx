@@ -1,5 +1,5 @@
 import Accordeon from "../components/Accordeon";
-import { Cards } from "../components/Banner";
+import Banner, { Cards } from "../components/Banner";
 import { CardsBlog } from "../components/BlogCompo";
 import Header from "../components/Header";
 import { ChechIcon, EyeIcon, SheetIcon, SunIcon } from "../components/Icons";
@@ -8,6 +8,7 @@ function Home() {
   return (
     <>
       <Header />
+      <Banner />
       <main className="px-4">
         <article className="flex flex-col pt-20">
           <p className="text-black/50 text-3xl text-center mb-4">

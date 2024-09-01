@@ -35,7 +35,6 @@ export default function Header() {
           <Hamburguer />
         </div>
       </header>
-      <Banner />
     </main>
   );
 }
