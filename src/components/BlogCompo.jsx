@@ -28,7 +28,7 @@ export function CardsBlog() {
     },
   ];
   return (
-    <ul className="w-full flex flex-wrap justify-center md:flex-row flex-col max-w-[1100px] gap-7 mx-auto ">
+    <ul className="w-full flex flex-wrap justify-center md:flex-row flex-col max-w-[1120px] gap-7 mx-auto ">
       {cards.map((card, index) => (
         <Card card={card} key={index} />
       ))}
