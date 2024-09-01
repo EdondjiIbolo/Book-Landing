@@ -66,7 +66,7 @@ export function Cards() {
     },
   ];
   return (
-    <ul className="cards">
+    <ul className="cards ">
       {cards.map((card, index) => (
         <Card card={card} key={index} />
       ))}
