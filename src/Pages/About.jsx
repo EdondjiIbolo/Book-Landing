@@ -62,7 +62,7 @@ export default function About() {
           <h2 className="md:text-4xl leading-relaxed text-3xl  text-black max-w-[30ch]  text-pretty   ">
             Handshake infographic mass market crowdfunding iteration.
           </h2>
-          <p className="leading-loose text-black/75 text-md  text-pretty pt-3 w-[65ch] md:w-auto  ">
+          <p className="leading-loose text-black/75 text-md  text-pretty pt-3 max-w-[65ch] md:w-auto  ">
             Conversion angel investor entrepreneur first mover advantage.
             Handshake infographic mass market crowdfunding iteration. Traction
             stock user experience deployment beta innovator incubator focus.
@@ -73,15 +73,15 @@ export default function About() {
           </p>
         </section>
         <section className="container-blue py-20 text-center text-white ">
-          <article className="max-w-[1120px] mx-auto w-full">
+          <article className="max-w-[1120px] p-6 mx-auto w-full">
             <div>
               <span className=" text-lg mb-4">Our story</span>
               <h2 className="sm:text-4xl leading-relaxed text-2xl mx-auto   max-w-[30ch]  text-pretty   ">
                 Handshake infographic mass market crowdfunding iteration.
               </h2>
             </div>
-            <article className="flex justify-between p-3 py-10">
-              <div className="flex flex-col justify-center items-start">
+            <article className="flex justify-between sm:flex-row flex-col items-center sm:items-start  p-3 py-10">
+              <div className="flex flex-col justify-center sm:items-start">
                 <span className="text-6xl  text-green-500 font-semibold">
                   120 m
                 </span>
@@ -89,7 +89,7 @@ export default function About() {
                   Cool feature title
                 </span>
               </div>
-              <div className="flex flex-col justify-center items-start">
+              <div className="flex flex-col justify-center sm:items-start">
                 <span className="text-6xl  text-green-500 font-semibold">
                   10.000
                 </span>
@@ -97,7 +97,7 @@ export default function About() {
                   Cool feature title
                 </span>
               </div>
-              <div className="flex flex-col justify-center items-start">
+              <div className="flex flex-col justify-center sm:items-start">
                 <span className="text-6xl  text-green-500 font-semibold">
                   240
                 </span>
@@ -114,13 +114,13 @@ export default function About() {
             <h3 className="md:text-4xl leading-relaxed text-3xl  text-black max-w-[30ch]  text-pretty   ">
               The leadership team
             </h3>
-            <p className="leading-loose text-black/75 text-md text-pretty pt-3 w-[65ch] md:w-auto  ">
+            <p className="leading-loose text-black/75 text-md text-pretty pt-3 max-w-[65ch] md:w-auto  ">
               Conversion angel investor entrepreneur first mover advantage.
               Handshake infographic mass market crowdfunding iteration. Traction
               stock user experience deployment beta innovator incubator focus.
             </p>
           </section>
-          <section className="grid md:grid-cols-3 sm:gap-10 py-5 ">
+          <section className="grid md:grid-cols-3 gap-10 py-5 px-4 sm:px-2  ">
             <div className="flex flex-col gap-3 banner-2">
               <img src="./assets/call.png" alt="image" />
               <div>
@@ -151,7 +151,7 @@ export default function About() {
               <h2 className="sm:text-4xl leading-normal text-2xl    max-w-[30ch]  text-pretty   ">
                 Things in we believe
               </h2>
-              <p className="leading-normal  text-lg  text-pretty pt-3 w-[55ch] md:w-auto  ">
+              <p className="leading-normal  text-lg  text-pretty pt-3 ma-w-[55ch] md:w-auto  ">
                 Conversion angel investor entrepreneur first mover advantage.
                 Handshake infographic mass market crowdfunding iteration.
                 Traction stock user experience deployment beta innovator
@@ -159,7 +159,7 @@ export default function About() {
               </p>
             </div>
             <article className="flex flex-col gap-5 p-3 py-10">
-              <div className="flex items-center banner-2 gap-4">
+              <div className="sm:flex-row flex-col flex sm:items-center banner-2 py-3 gap-4">
                 <img
                   src="./assets/cool.webp"
                   alt=""
@@ -174,7 +174,7 @@ export default function About() {
                   </p>
                 </div>
               </div>
-              <div className="flex items-center banner-2 gap-6">
+              <div className="sm:flex-row flex-col flex sm:items-center banner-2 py-3 gap-6">
                 <img
                   src="./assets/event.webp"
                   alt=""
@@ -189,7 +189,7 @@ export default function About() {
                   </p>
                 </div>
               </div>
-              <div className="flex items-center banner-2 gap-6">
+              <div className="sm:flex-row flex-col flex sm:items-center banner-2 py-3 gap-6">
                 <img
                   src="./assets/event.webp"
                   alt=""
